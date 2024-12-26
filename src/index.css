@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Inter", serif;
+}
+
+.move {
+  animation: Move 1.2s ease-in-out var(--delay) both;
+}
+
+@keyframes Move {
+  0% {
+    transform: translate(0px);
+  }
+
+  50% {
+    transform: translate(190px, -190px);
+  }
+
+  65% {
+    transform: translate(185px, -185px);
+  }
+  
+  100% {
+    transform: translate(0px);
+    z-index: var(--ZIndex);
+  }
+}
